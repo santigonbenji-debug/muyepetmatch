@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuración – Muyè PetMatch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" />
+  <style>
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background-image: url('huellitas.png');
+      background-size: contain;
+      background-repeat: repeat;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 480px;
+      width: 90%;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      color: #2f3a3c;
+      margin-bottom: 25px;
+      font-size: 24px;
+    }
+
+    .form-box label {
+      font-weight: 600;
+      margin-top: 15px;
+      display: block;
+      color: #2f3a3c;
+    }
+
+    .form-box input,
+    .form-box textarea,
+    .form-box select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      margin-top: 6px;
+      font-family: inherit;
+      font-size: 15px;
+      resize: none;
+    }
+
+    .form-box textarea {
+      height: 80px;
+    }
+
+    .form-box .checkbox-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .form-box button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background-color: #2f3a3c;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .form-box button:hover {
+      background-color: #3f4a4c;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="form-box">
+    <h2>Configuración de tu perfil 🔧</h2>
+    <form>
+      <label for="nombre">Tu nombre para mostrar</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej: Sofía Gómez" />
+
+      <label for="estado">¿Qué estás buscando?</label>
+      <select id="estado" name="estado">
+        <option value="adoptar">Buscando adoptar</option>
+        <option value="dar_en_adopcion">Dando en adopción</option>
+        <option value="ayudar">Solo quiero ayudar</option>
+      </select>
+
+      <label for="descripcion">Tu descripción visible en el perfil</label>
+      <textarea id="descripcion" name="descripcion" placeholder="Amo los animales, tengo una perrita y me gustaría adoptar otro compañero."></textarea>
+
+      <label for="ubicacion">Ciudad donde vivís</label> <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej: Córdoba Capital" />
+
+      <div class="checkbox-group">
+        <label> <input type="checkbox" id="mostrar_email" name="mostrar_email" />
+          Mostrar mi email en el perfil
+        </label>
+      </div>
+
+      <div class="checkbox-group">
+        <label> <input type="checkbox" id="recibir_notificaciones" name="recibir_notificaciones" />
+          Recibir notificaciones por email
+        </label>
+      </div>
+
+
+      <button type="submit">Guardar configuración</button>
+    </form>
+  </div>
+
+</body>
+</html>
+

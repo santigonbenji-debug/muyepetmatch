@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear cuenta – Muyè PetMatch</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" />
+  <style>
+    body {
+      font-family: 'Fredoka', sans-serif;
+      background-image: url('huellitas.png');
+      background-size: contain;
+      background-repeat: repeat;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-box {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 24px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      max-width: 420px;
+      width: 90%;
+    }
+
+    .form-box h2 {
+      text-align: center;
+      color: #2f3a3c;
+      margin-bottom: 25px;
+    }
+
+    .form-box label {
+      font-weight: 600;
+      margin-top: 12px;
+      display: block;
+    }
+
+    .form-box input,
+    .form-box textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 12px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+      font-family: inherit;
+      resize: none;
+    }
+
+    .form-box textarea {
+      height: 80px;
+    }
+
+    .form-box button {
+      margin-top: 20px;
+      width: 100%;
+      padding: 12px;
+      background-color: #2f3a3c;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    .form-box button:hover {
+      background-color: #3f4a4c;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-box">
+    <h2>Crear cuenta 🐾</h2>
+    <form id="registroForm">
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Ej: Sofía" required />
+
+      <label for="apellido">Apellido</label>
+      <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+
+      <label for="fecha">Fecha de nacimiento</label>
+      <input type="date" id="fecha" name="fecha" required />
+
+      <label for="descripcion">Contanos un poco sobre vos</label>
+      <textarea id="descripcion" name="descripcion" placeholder="Me encantan los animales, tengo una perrita rescatada y me gustaría adoptar un compañerito para ella." rows="3"></textarea>
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" name="password" placeholder="•••••••" required />
+
+      <button type="submit">Registrarme</button>
+    </form>
+  </div>
+  <script src="registro.js"></script>
+</body>
+</html>

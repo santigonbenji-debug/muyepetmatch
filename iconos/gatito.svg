@@ -1,0 +1,11 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#2f3a3c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Boina -->
+  <path d="M22 12 Q32 2 42 12" fill="#2f3a3c"/>
+  <circle cx="32" cy="36" r="20" fill="none"/>
+  <path d="M22 30 q2 2 4 0" />
+  <path d="M38 30 q2 2 4 0" />
+  <path d="M26 40 q6 4 12 0" fill="none" />
+  <path d="M12 24 q-6-6 0-12 l10 10" fill="none"/>
+  <path d="M52 24 q6-6 0-12 l-10 10" fill="none"/>
+</svg>

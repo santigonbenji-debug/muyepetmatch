@@ -1,4 +1,318 @@
-html {
-  height: 100%;
-  width: 100%;
+/* Reset general */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* Tipografía general + fondo con huellitas */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+  position: relative;
+  z-index: 0;
+  overflow-x: hidden;
+}
+
+/* Fondo decorativo con transparencia */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('fondo.png'); /* Asegurate que se llama así */
+  background-size: 300px;
+  background-repeat: repeat;
+  background-position: center;
+  opacity: 0.12;
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+/* Header flotante con icono */
+header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px 20px;
+  background-color: transparent;
+}
+
+.perfil-icono {
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Logo central */
+.logo-central {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.logo-central img {
+  width: 120px;
+  height: auto;
+}
+
+/* Título central */
+.titulo-central {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.titulo-central h1 {
+  font-size: 38px;
+  color: #333;
+  font-weight: 700;
+  margin: 0;
+}
+
+.titulo-central p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Menú de navegación */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #e6e6e6;
+  padding: 15px 0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+  margin-bottom: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #555;
+}
+
+/* Contenido principal */
+main {
+  padding: 40px;
+}
+
+main h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #2e2e2e;
+  font-weight: 600;
+}
+
+main p,
+main li {
+  font-size: 17px;
+  color: #444;
+}
+
+/* Transiciones */
+#contenido {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Registro */
+.registro-usuario {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crear-cuenta {
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.crear-cuenta:hover {
+  color: #666;
+}
+
+/* Bienvenida */
+.inicio-bienvenida {
+  text-align: center;
+}
+
+.boton-comenzar {
+  margin-top: 20px;
+  padding: 10px 22px;
+  font-size: 16px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+
+.boton-comenzar:hover {
+  background-color: #5e5e5e;
+}
+
+/* Modal */
+.modal-registro {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-contenido {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  width: 300px;
+  position: relative;
+  text-align: center;
+}
+
+.modal-contenido h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.modal-contenido input {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modal-contenido button {
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-contenido button:hover {
+  background-color: #666;
+}
+
+.cerrar-modal {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.footer {
+  text-align: center;
+  padding: 30px 10px;
+  font-size: 14px;
+  color: #777;
+  background-color: #f3f3f3;
+  margin-top: 40px;
+}
+
+.footer-links {
+  margin-top: 8px;
+}
+
+.footer-links a {
+  color: #555;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  color: #222;
+}
+/* Nueva pantalla principal */
+#pantalla-principal {
+  display: flex;
+  height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background-color: #f3f3f3;
+  padding: 20px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin: 20px 0;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Zona Central */
+.zona-central {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-central-grande {
+  width: 150px;
+  margin-bottom: 40px;
+}
+
+.botones-central {
+  display: flex;
+  gap: 30px;
+}
+
+.boton-central {
+  padding: 15px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-central:hover {
+  background-color: #5e5e5e;
+}
+
