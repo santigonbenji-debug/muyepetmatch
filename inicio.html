@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="encabezado.css">
   <link rel="stylesheet" href="inicio.css">
 
-
-
   <style>
     :root {
       --gris-logo: #2f3a3c;
@@ -24,8 +22,6 @@
     }
 
     body {
-      
-      
       margin: 0;
       font-family: 'Fredoka', sans-serif;
       background-color: var(--fondo-principal);
@@ -37,39 +33,20 @@
       color: var(--gris-suave);
     }
 
-    .botones-principales {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin: 30px 0;
-    }
-
-    .botones-principales button {
-      background-color: var(--rosa-suave);
-      border: none;
-      padding: 10px 20px;
-      border-radius: 12px;
-      font-size: 16px;
-      cursor: pointer;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: background-color 0.3s;
-    }
-
-    .botones-principales button:hover {
-      background-color: #eed0d9;
-    }
-
     .main-content {
-      margin-left: 80px;
-      padding: 0 40px 40px;
+      padding: 40px;
+      padding-top: 20px;
       flex: 1;
+
     }
 
     .grid-publicaciones {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 280px));
+      justify-content: center;
+      gap: 25px;
     }
+
 
     .publicacion {
       background-color: var(--fondo-card);
@@ -111,6 +88,40 @@
       color: var(--gris-suave);
     }
 
+    .btn-adoptar {
+      margin-top: 10px;
+      background-color: var(--rosa-suave);
+      border: none;
+      border-radius: 10px;
+      padding: 8px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .btn-adoptar:hover {
+      background-color: #eed0d9;
+    }
+
+    .btn-publicar {
+      margin: 100px auto 20px;
+      display: block;
+      background-color: var(--rosa-suave);
+      border: none;
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+  
+
+    }
+
+    .btn-publicar:hover {
+      background-color: #eed0d9;
+    }
+
     @keyframes aparecer {
       from {
         opacity: 0;
@@ -129,8 +140,8 @@
       color: var(--gris-suave);
       background-color: var(--fondo-principal);
       border-top: 1px solid rgba(0, 0, 0, 0.05);
+      margin-top: 40px;
     }
-    
   </style>
 </head>
 
@@ -139,46 +150,7 @@
     <img src="loguito.png" alt="Logo Muyè PetMatch" class="logo-muye">
   </header>
 
-
-  <div class="sidebar">
-    <ul>
-      <li onclick="cargarSeccion('inicioInterno.html')">
-        <img src="iconos/home.svg" alt="Inicio">
-        <span class="texto">Inicio</span>
-      </li>
-      <li onclick="window.location.href='mascotas.html'">
-        <img src="iconos/pets.svg" alt="Tus mascotas">
-        <span class="texto">Tus mascotas</span>
-      </li>
-
-      </li>
-      <li onclick="cargarSeccion('notificaciones.html')">
-        <img src="iconos/notification.svg" alt="Notificaciones">
-        <span class="texto">Notificaciones</span>
-      </li>
-      <li onclick="window.location.href='bandeja.html'"> 
-        <img src="iconos/mail.svg" alt="Bandeja de entrada">
-        <span class="texto">Bandeja</span>
-      </li>
-      <li onclick="window.location.href='configuracion.html'">
-        <img src="iconos/settings.svg" alt="Configuración">
-        <span class="texto">Configuración</span>
-      </li>
-      <li onclick="window.location.href='ayuda.html'">
-        <img src="iconos/help.svg" alt="Ayuda">
-        <span class="texto">Ayuda</span>
-      </li>
-      <li onclick="activarModoOscuro()">
-        <img src="iconos/moon.svg" alt="Modo oscuro">
-        <span class="texto">Modo oscuro</span>
-      </li>
-      <li onclick="window.location.href='crearCuenta.html'">
-        <img src="iconos/huesito.svg" alt="Crear cuenta">
-        <span class="texto">Crear cuenta</span>
-      </li>
-    </ul>
-  </div>
-
+  <button class="btn-publicar" onclick="manejarPublicar()">Publicar mascota</button>
 
 
   <div class="main-content">
@@ -188,6 +160,8 @@
         <div class="publicacion-content">
           <h3>¡Hola! Soy Rocky</h3>
           <p>Tengo 2 años y me encanta correr. ¿Jugamos?</p>
+          <button class="btn-adoptar" onclick="manejarAdoptar()">Adoptar</button>
+
         </div>
       </div>
 
@@ -196,6 +170,7 @@
         <div class="publicacion-content">
           <h3>¡Hola! Soy Luna</h3>
           <p>Soy tranquila y dulce. Amo dormir al sol ☀️</p>
+          <button class="btn-adoptar" onclick="window.location.href='registro.html'">Adoptar</button>
         </div>
       </div>
 
@@ -204,24 +179,19 @@
         <div class="publicacion-content">
           <h3>¡Hola! Soy Max</h3>
           <p>Soy fiel, protector y me encantan los abrazos.</p>
+          <button class="btn-adoptar" onclick="window.location.href='registro.html'">Adoptar</button>
         </div>
-      </div> <!-- 👈 Este cierre faltaba -->
-
-      <!-- ✅ Ahora el contenido dinámico está fuera de .publicacion -->
-      <div id="contenido-principal">
-        <!-- Acá se cargará el contenido dinámico -->
       </div>
+    </div>
+  </div>
 
-      <footer>
-        Muyè PetMatch – Somos la voz de los peluditos 🐶🐱
-      </footer>
-
-      <script src="cargarContenido.js"></script>
-
+  <footer>
+    Muyè PetMatch – Somos la voz de los peluditos 🐶🐱
+  </footer>
+  <script src="inicio.js"></script>
 
 </body>
 </html>
-
 
 
 

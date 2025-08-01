@@ -1,33 +1,31 @@
-document.getElementById('registroForm').addEventListener('submit', async function (e) {
-  e.preventDefault();
+function registrarUsuario() {
+  const nombre = document.getElementById('nombre').value;
+  const email = document.getElementById('email').value;
+  const password = document.getElementById('password').value;
 
-  const datos = {
-    nombre: document.getElementById('nombre').value,
-    apellido: document.getElementById('apellido').value,
-    email: document.getElementById('email').value,
-    fechaNacimiento: document.getElementById('fecha').value,
-    descripcion: document.getElementById('descripcion').value,
-    password: document.getElementById('password').value
-  };
+  const nuevoUsuario = { nombre, email, password };
 
-  try {
-    const respuesta = await fetch('/registrar', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(datos)
+  fetch('/api/registro', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(nuevoUsuario)
+  })
+    .then(res => {
+      if (!res.ok) throw new Error('Falló el registro');
+      return res.json();
+    })
+    .then(() => {
+      localStorage.setItem('usuarioLogueado', 'true');
+      localStorage.setItem('usuarioNombre', nombre);
+      window.location.href = '/inicio';
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('mensaje').textContent = 'Error al registrar';
     });
+}
 
-    const resultado = await respuesta.json();
-
-    if (respuesta.ok) {
-      alert('Cuenta creada con éxito.');
-      // Podés redirigir si querés: window.location.href = 'iniciointerno.html';
-    } else {
-      alert('Error: ' + resultado.mensaje);
-    }
-  } catch (error) {
-    alert('Error en la conexión con el servidor');
-  }
+document.getElementById('registroForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  registrarUsuario();
 });

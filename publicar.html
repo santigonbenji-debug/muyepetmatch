@@ -2,10 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crear cuenta – Muyè PetMatch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Publicar Mascota – Muyè PetMatch</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" />
   <style>
     body {
       font-family: 'Fredoka', sans-serif;
@@ -51,10 +50,6 @@
       resize: none;
     }
 
-    .form-box textarea {
-      height: 80px;
-    }
-
     .form-box button {
       margin-top: 20px;
       width: 100%;
@@ -68,36 +63,45 @@
       font-weight: 600;
     }
 
-    .form-box button:hover {
-      background-color: #3f4a4c;
+    #preview {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    #preview img {
+      max-width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
     }
   </style>
 </head>
 <body>
   <div class="form-box">
-    <h2>Crear cuenta 🐾</h2>
-    <form id="registroForm">
+    <h2>Publicar Mascota 🐶</h2>
+    <form id="formMascota" enctype="multipart/form-data">
       <label for="nombre">Nombre</label>
-      <input type="text" id="nombre" name="nombre" placeholder="Ej: Sofía" required />
+      <input type="text" id="nombre" name="nombre" required />
 
-      <label for="apellido">Apellido</label>
-      <input type="text" id="apellido" name="apellido" placeholder="Ej: Pérez" required />
+      <label for="edad">Edad</label>
+      <input type="text" id="edad" name="edad" required />
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="tu@email.com" required />
+      <label for="tipo">Tipo</label>
+      <input type="text" id="tipo" name="tipo" placeholder="Ej: Perro, Gato..." required />
 
-      <label for="fecha">Fecha de nacimiento</label>
-      <input type="date" id="fecha" name="fecha" required />
+      <label for="descripcion">Descripción</label>
+      <textarea id="descripcion" name="descripcion" rows="3" placeholder="Es juguetón, tranquilo, etc."></textarea>
 
-      <label for="descripcion">Contanos un poco sobre vos</label>
-      <textarea id="descripcion" name="descripcion" placeholder="Me encantan los animales, tengo una perrita rescatada y me gustaría adoptar un compañerito para ella." rows="3"></textarea>
+      <label for="ubicacion">Ubicación</label>
+      <input type="text" id="ubicacion" name="ubicacion" placeholder="Ej: Córdoba Capital" required />
 
-      <label for="password">Contraseña</label>
-      <input type="password" id="password" name="password" placeholder="•••••••" required />
+      <label for="foto">Foto</label>
+      <input type="file" id="foto" name="foto" accept="image/*" />
+      <div id="preview"></div>
 
-      <button type="submit">Registrarme</button>
+      <button type="submit">Publicar</button>
     </form>
   </div>
-  <script src="registro.js"></script>
+
+  <script src="publicar.js"></script>
 </body>
 </html>
