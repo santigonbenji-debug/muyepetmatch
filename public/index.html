@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muyè PetMatch</title>
+    <link rel="icon" href="/loguito.png">
+    <meta name="description" content="Muyè PetMatch: encontrá tu compañero ideal o publicá una mascota en adopción. Simple, transparente y pensado para ayudar a los peluditos.">
+    <!-- Open Graph (opcional pero recomendado para compartir) -->
+    <meta property="og:title" content="Muyè PetMatch — Somos la voz de los peluditos">
+    <meta property="og:description" content="Adoptá, publicá y ayudá. Simple, claro y con corazón.">
+    <meta property="og:image" content="https://MuyeFINAL--santigonbenji.repl.co/loguito.png">
+    <meta property="og:url" content="https://MuyeFINAL--santigonbenji.repl.co/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="registro-usuario">
+        <span class="perfil-icono">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            fill="none"
+            stroke="#333"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="feather feather-user"
+          >
+            <path
+              d="M20 21v-2a4 4 0 0 0-3-3.87M4 21v-2a4 4 0 0 1 3-3.87M16 7a4 4 0 1 1-8 0 4 4 0 0 1 8 0z"
+            />
+          </svg>
+        </span>
+        <a href="registro.html" class="crear-cuenta">Crear cuenta</a>
+
+      </div>
+    </header>
+
+    <div class="logo-central">
+      <img src="Mlogo.png" alt="Logo Muyè PetMatch" />
+    </div>
+
+    <div class="titulo-central">
+      <h1>Muyè PetMatch</h1>
+      <p>Un puente entre almas</p>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#" onclick="mostrarSeccion('inicio')">Inicio</a></li>
+        <li>
+          <a href="#" onclick="mostrarSeccion('quienes')">¿Quiénes somos?</a>
+        </li>
+        <li>
+          <a href="#" onclick="mostrarSeccion('adoptar')"
+            >¿Qué necesitás saber para adoptar?</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="mostrarSeccion('info')">Información útil</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="contenido">
+      <section id="inicio">
+        <div class="inicio-bienvenida">
+          <h2>Bienvenido a Muyè PetMatch</h2>
+          <p>
+            Descubrí una nueva forma de conectar con tu futuro compañero peludo.
+          </p>
+          <button class="boton-comenzar" onclick="location.href='inicio.html'">
+            Comenzar
+          </button>
+        </div>
+      </section>
+
+      <section id="quienes" style="display: none">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          Muÿe PetMatch es una plataforma comunitaria que conecta a personas y organizaciones
+          con animales que buscan hogar. Promovemos la adopción responsable y el bienestar
+          animal, acercando a quienes quieren adoptar con quienes publican.
+        </p>
+        <ul>
+          <li><strong>No somos un refugio</strong> ni recibimos animales físicamente.</li>
+          <li><strong>No cobramos comisiones</strong> por las adopciones.</li>
+          <li>Revisamos publicaciones y fomentamos buenas prácticas, pero el <strong>acuerdo final</strong> se realiza entre publicador y adoptante.</li>
+        </ul>
+
+        <div class="info-banner">
+          <strong>Aviso:</strong> verificá la identidad del publicador antes de entregar o adoptar.
+          Si algo no te cierra, usá “Denunciar” o escribinos. Muÿe PetMatch no intermedia adopciones.
+          <a href="#" onclick="mostrarSeccion('terminos')">Ver Términos</a>
+
+        </div>
+      </section>
+
+      <section id="adoptar" style="display: none">
+        <h2>¿Qué necesitás saber para adoptar?</h2>
+        <ol>
+          <li><strong>Requisitos básicos:</strong> ser mayor de 18 años, DNI, domicilio estable y consentimiento de tu hogar.</li>
+          <li><strong>Entrevista breve:</strong> el publicador puede pedir referencias, fotos del espacio y/o una visita.</li>
+          <li><strong>Compromiso de bienestar:</strong> vacunación, desparasitación y <em>castración</em> (si corresponde).</li>
+          <li><strong>Seguimiento:</strong> pueden solicitar 1–3 controles durante los primeros meses.</li>
+          <li><strong>Contrato/acta:</strong> algunas publicaciones lo usan; leelo antes de firmar.</li>
+        </ol>
+        <p class="muted">
+          Los requisitos pueden variar según quien publica (rescatista, familia o refugio).
+          Muÿe PetMatch no participa en contratos ni garantías entre partes.
+        </p>
+      </section>
+
+      <section id="info" style="display: none">
+        <h2>Información útil</h2>
+
+        <h3>Checklist primeros 7 días</h3>
+        <ul>
+          <li>Visita veterinaria inicial (control y plan sanitario).</li>
+          <li>Espacio seguro: cama, agua/comida, caja sanitaria (gatos) y zona de descanso.</li>
+          <li>Alimentación gradual para evitar malestares.</li>
+          <li>Identificación: chapita con teléfono; microchip si podés.</li>
+          <li>Rutina: horarios fijos de comida, paseos y juego.</li>
+        </ul>
+
+        <h3>Costos estimados (referenciales)</h3>
+        <ul>
+          <li>Alimento mensual (tamaño mediano): bajo / medio / alto costo.</li>
+          <li>Veterinaria y vacunas: plan anual + antiparasitarios.</li>
+          <li>Extras: cama, correa/pechera, arenero/rascador, juguetes.</li>
+        </ul>
+
+        <p class="muted">
+          La información es orientativa y puede variar por zona y veterinaria. Ante dudas médicas,
+          consultá a un profesional.
+        </p>
+      </section>
+      <!-- TÉRMINOS Y CONDICIONES -->
+      <section id="terminos" style="display: none">
+        <h2>Términos y Condiciones</h2>
+        <p class="muted">Última actualización: 26/08/2025</p>
+
+        <div class="legal-card">
+          <h3>1) Alcance del servicio</h3>
+          <p>Muÿe PetMatch (“la Plataforma”) es un punto de encuentro para publicar y encontrar
+          animales en adopción. <strong>No somos un refugio, criadero ni clínica veterinaria</strong>.
+          No alojamos animales ni participamos como parte en las adopciones.</p>
+          <p>El <strong>acuerdo final</strong> (entrega, seguimiento y condiciones) se realiza directamente
+          entre publicador y adoptante.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>2) Aceptación y cuentas</h3>
+          <ul>
+            <li>Usar la Plataforma implica aceptar estos Términos.</li>
+            <li>Debés ser mayor de 18 años y brindar datos veraces.</li>
+            <li>Podemos moderar, suspender o eliminar cuentas y publicaciones que infrinjan reglas o la ley.</li>
+          </ul>
+        </div>
+
+        <div class="legal-card">
+          <h3>3) Publicaciones y contenido</h3>
+          <ul>
+            <li>Las fotos, descripciones y datos los cargan usuarios. Aunque moderamos, <strong>no garantizamos</strong> su veracidad o disponibilidad.</li>
+            <li><strong>Prohibido</strong>: venta de animales, cría comercial, maltrato, difusión de datos ajenos sin permiso, exigir pagos indebidos (salvo recupero de gastos justificado) y cualquier actividad ilegal.</li>
+            <li>Autorizás a la Plataforma a <strong>mostrar</strong> tu contenido para funcionamiento y difusión. Conservás tus derechos sobre él.</li>
+          </ul>
+        </div>
+
+        <div class="legal-card">
+          <h3>4) Interacciones y seguridad</h3>
+          <p>Las conversaciones y acuerdos ocurren entre usuarios. Recomendamos:</p>
+          <ul>
+            <li>Verificar identidad y domicilio antes de entregar o adoptar.</li>
+            <li>Usar contrato/acta de adopción responsable cuando corresponda.</li>
+            <li>No realizar pagos sin comprobante ni entregar animales sin validar a la otra parte.</li>
+          </ul>
+        </div>
+
+        <div class="legal-card">
+          <h3>5) Salud y bienestar</h3>
+          <p>La información sanitaria es orientativa. Para diagnósticos y tratamientos, consultá a un/a veterinario/a.
+          Recomendamos castración, vacunación y controles periódicos.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>6) Disponibilidad y cambios</h3>
+          <p>Podemos actualizar funciones o interrumpir el servicio temporalmente. Publicaremos cambios a estos Términos.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>7) Responsabilidad</h3>
+          <p>En la máxima medida permitida por la ley, Muÿe PetMatch y su equipo <strong>no serán responsables</strong>
+          por daños directos o indirectos derivados de adopciones, traslados, encuentros, tratamientos, acuerdos entre usuarios
+          o del uso de la Plataforma.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>8) Ley aplicable y jurisdicción</h3>
+          <p>Estos Términos se rigen por las leyes de la República Argentina. Cualquier controversia se somete a los tribunales
+          de <strong>San Luis, Argentina</strong>.</p>
+        </div>
+
+        <p class="muted"><strong>Nota:</strong> este documento es informativo y no constituye asesoría legal.</p>
+      </section>
+
+      <!-- POLÍTICA DE PRIVACIDAD -->
+      <section id="privacidad" style="display: none">
+        <h2>Política de Privacidad</h2>
+        <p class="muted">Última actualización: 26/08/2025</p>
+
+        <div class="legal-card">
+          <h3>1) Datos que tratamos</h3>
+          <ul>
+            <li>Cuenta: nombre, email y contraseña.</li>
+            <li>Perfil (opcionales): ubicación, teléfono, WhatsApp, alias, “sobre mí”, foto.</li>
+            <li>Publicaciones: fotos y descripciones de mascotas.</li>
+            <li>Uso básico del sitio (logs técnicos para seguridad y métricas).</li>
+          </ul>
+        </div>
+
+        <div class="legal-card">
+          <h3>2) Finalidades</h3>
+          <ul>
+            <li>Crear tu cuenta y permitir el contacto entre publicadores y adoptantes.</li>
+            <li>Moderación, prevención de abuso y seguridad.</li>
+            <li>Mejorar la Plataforma y responder consultas.</li>
+          </ul>
+        </div>
+
+        <div class="legal-card">
+          <h3>3) Base legal</h3>
+          <p>Usamos tus datos con tu <strong>consentimiento</strong> y para ejecutar el <strong>servicio solicitado</strong> (funciones de la Plataforma).</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>4) Conservación</h3>
+          <p>Mantenemos los datos mientras tengas cuenta activa o sean necesarios para brindar el servicio. Podés pedir la eliminación.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>5) Compartidos y ubicaciones</h3>
+          <p>Usamos servicios de hosting y almacenamiento (por ej., servidor web/imagenes). No vendemos tus datos. Solo compartimos con proveedores necesarios para operar el sitio.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>6) Tus derechos</h3>
+          <p>Podés solicitar acceso, rectificación, actualización o eliminación de tus datos escribiendo a
+            <a href="mailto:muyepetmatch@gmail.com">muyepetmatch@gmail.com</a>.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>7) Cookies/analítica</h3>
+          <p>Usamos cookies técnicas para el funcionamiento. Si sumamos analítica o terceros de marketing, lo informaremos y pediremos consentimiento si corresponde.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>8) Seguridad</h3>
+          <p>Aplicamos medidas razonables para proteger la información. Ningún sistema es 100% infalible.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>9) Menores</h3>
+          <p>La Plataforma está destinada a mayores de 18 años.</p>
+        </div>
+
+        <div class="legal-card">
+          <h3>10) Cambios</h3>
+          <p>Podemos actualizar esta Política. Publicaremos la versión vigente con fecha.</p>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2025 Muyè PetMatch · Un puente entre almas</p>
+      <div class="footer-links">
+        <a href="#" onclick="mostrarSeccion('terminos')">Términos y Condiciones</a>
+        <span>·</span>
+        <a href="#" onclick="mostrarSeccion('privacidad')">Política de Privacidad</a>
+        <span>·</span>
+        <a href="mailto:muyepetmatch@gmail.com">Contacto</a>
+      </div>
+    </footer>
+
+    <!-- === Script único y correcto (sin anidar) === -->
+    <script>
+      function mostrarSeccion(id) {
+        const secciones = document.querySelectorAll("main > section");
+        secciones.forEach((sec) => (sec.style.display = "none"));
+        const activa = document.getElementById(id);
+        if (activa) {
+          activa.style.display = "block";
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+      }
+      // soporta abrir por hash: index.html#terminos / #privacidad / etc.
+      function abrirPorHash(){
+        const h = (location.hash || "").replace("#","");
+        if (h && document.getElementById(h)) {
+          mostrarSeccion(h);
+        } else {
+          mostrarSeccion("inicio");
+        }
+      }
+      // prevenir saltos por <a href="#">
+      document.addEventListener("click", (e) => {
+        const a = e.target.closest('a[href="#"]');
+        if (a) e.preventDefault();
+      });
+
+      window.addEventListener("hashchange", abrirPorHash);
+      document.addEventListener("DOMContentLoaded", abrirPorHash);
+    </script>
+
+    </body>
+    </html>
+

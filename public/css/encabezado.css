@@ -1,0 +1,79 @@
+.encabezado-horizontal {
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  /* logo a la izquierda */
+  position: relative;
+  background: #fdf8f3;
+  height: 80px;
+  padding: 0 40px;
+}
+
+
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  position: static;
+  /* estaba absolute */
+  transform: none;
+  /* quitamos el centrado forzado */
+  margin-right: auto;
+  /* empuja los botones a la derecha */
+}
+
+.logo-muye {
+  height: 48px;
+}
+
+.titulo-header {
+  font-size: 26px;
+  font-weight: 600;
+  margin-left: 7px;
+  color: #2f3a3c;
+  letter-spacing: 1px;
+}
+
+.subtitulo-header {
+  font-size: 15px;
+  font-weight: 500;
+  color: #7d878a;
+  margin-left: 6px;
+  letter-spacing: 1.8px;
+  position: relative;
+  top: 2px;
+}
+
+.info-usuario {
+  position: absolute;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+}
+
+.btn-cerrar-sesion {
+  background: #ffdadb;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #b32d2d;
+  transition: background 0.2s;
+  font-weight: bold;
+}
+
+.btn-cerrar-sesion:hover {
+  background: #ffb3b3;
+}
+
+
+.main-content {
+  margin-left: 80px;
+  margin-top: 80px;
+  /* ✅ AGREGÁ ESTA LÍNEA */
+  padding: 0 40px 40px;
+  flex: 1;

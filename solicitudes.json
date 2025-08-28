@@ -1,0 +1,283 @@
+[
+  {
+    "id": 1755038771245,
+    "idMascota": "1755038752482",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "Me parece un animal hermoso",
+    "estado": "aceptada",
+    "fecha": 1755038771245,
+    "contactoDuenio": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    },
+    "contactoInteresado": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    }
+  },
+  {
+    "id": 1755039978893,
+    "idMascota": "1755038752482",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "Quiero el animal",
+    "estado": "aceptada",
+    "fecha": 1755039978893,
+    "contactoDuenio": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    },
+    "contactoInteresado": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    }
+  },
+  {
+    "id": 1755040872247,
+    "idMascota": "1755038752482",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "ss",
+    "estado": "aceptada",
+    "fecha": 1755040872247,
+    "contactoDuenio": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    },
+    "contactoInteresado": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    }
+  },
+  {
+    "id": 1755044058406,
+    "idMascota": "1755038752482",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "Quiero",
+    "estado": "aceptada",
+    "fecha": 1755044058406,
+    "contactoDuenio": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    },
+    "contactoInteresado": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    }
+  },
+  {
+    "id": 1755047137641,
+    "idMascota": "1755045584941",
+    "duenioEmail": "ale.altamiranda00@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "Prueba",
+    "estado": "aceptada",
+    "fecha": 1755047137641,
+    "contactoDuenio": {
+      "nombre": "Ale Altamiranda ",
+      "email": "ale.altamiranda00@gmail.com",
+      "telefono": "",
+      "whatsapp": "",
+      "otros": ""
+    },
+    "contactoInteresado": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    }
+  },
+  {
+    "id": 1755047164522,
+    "idMascota": "1755045584939",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "yo",
+    "estado": "aceptada",
+    "fecha": 1755047164522,
+    "contactoDuenio": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    },
+    "contactoInteresado": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    }
+  },
+  {
+    "id": 1755048151744,
+    "idMascota": "1755045584939",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "agustin.e.gonzalez15@gmail.com",
+    "mensaje": "Me gusto este perro, me gustaria adoptarlo.",
+    "estado": "aceptada",
+    "fecha": 1755048151744,
+    "contactoDuenio": {
+      "nombre": "creador",
+      "email": "santisbg9@gmail.com",
+      "telefono": "2657-392998",
+      "whatsapp": "2657-392998",
+      "otros": ""
+    },
+    "contactoInteresado": {
+      "nombre": "Agustin",
+      "email": "agustin.e.gonzalez15@gmail.com",
+      "telefono": "",
+      "whatsapp": "",
+      "otros": ""
+    }
+  },
+  {
+    "id": 1755815975206,
+    "idMascota": "1755814016828",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "Me gusta este animal, me gustaria adoptarlo",
+    "estado": "aceptada",
+    "fecha": 1755815975206,
+    "inter": {
+      "whatsapp": "",
+      "telefono": "",
+      "contacto": ""
+    }
+  },
+  {
+    "id": 1756161532866,
+    "idMascota": "1755045584935",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "lo quiero",
+    "estado": "pendiente",
+    "fecha": 1756161532866
+  },
+  {
+    "id": 1756161597250,
+    "idMascota": "1755045584937",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "yp",
+    "estado": "aceptada",
+    "fecha": 1756161597250,
+    "inter": {
+      "whatsapp": "",
+      "telefono": "",
+      "contacto": ""
+    }
+  },
+  {
+    "id": 1756162967792,
+    "idMascota": "1756162955540",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "la quiero",
+    "estado": "aceptada",
+    "fecha": 1756162967792,
+    "inter": {
+      "whatsapp": "",
+      "telefono": "",
+      "contacto": ""
+    }
+  },
+  {
+    "id": 1756163090485,
+    "idMascota": "1756163081014",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "sasas",
+    "estado": "aceptada",
+    "fecha": 1756163090485,
+    "inter": {
+      "whatsapp": "",
+      "telefono": "",
+      "contacto": ""
+    }
+  },
+  {
+    "id": 1756163177868,
+    "idMascota": "1755816420084",
+    "duenioEmail": "ale.altamiranda00@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "chorra",
+    "estado": "aceptada",
+    "fecha": 1756163177869,
+    "inter": {
+      "whatsapp": "",
+      "telefono": "",
+      "contacto": ""
+    }
+  },
+  {
+    "id": 1756311923140,
+    "idMascota": "1756311804948",
+    "duenioEmail": "ale.altamiranda00@gmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "Quiero 10g",
+    "estado": "aceptada",
+    "fecha": 1756311923140,
+    "inter": {
+      "whatsapp": "",
+      "telefono": "",
+      "contacto": ""
+    }
+  },
+  {
+    "id": 1756312270819,
+    "idMascota": "1756312232826",
+    "duenioEmail": "alejandro-altamiranda_osmar@hotmail.com",
+    "interesadoEmail": "santisbg9@gmail.com",
+    "mensaje": "bebe maldito",
+    "estado": "aceptada",
+    "fecha": 1756312270819,
+    "inter": {
+      "whatsapp": "",
+      "telefono": "",
+      "contacto": ""
+    }
+  },
+  {
+    "id": 1756312506909,
+    "idMascota": "1756312450444",
+    "duenioEmail": "santisbg9@gmail.com",
+    "interesadoEmail": "alejandro-altamiranda_osmar@hotmail.com",
+    "mensaje": "Allá",
+    "estado": "aceptada",
+    "fecha": 1756312506909,
+    "inter": {
+      "whatsapp": "",
+      "telefono": "",
+      "contacto": ""
+    }
+  }
+]

@@ -1,0 +1,522 @@
+.sidebar:hover {
+  width: 180px;
+}
+
+.sidebar {
+  background-color: transparent;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* ✅ Centra horizontalmente */
+  justify-content: center;
+  /* ✅ Centra verticalmente */
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0 8px 15px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.sidebar li img {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s;
+  filter: brightness(0) saturate(100%) invert(16%) sepia(10%) saturate(200%) hue-rotate(150deg) brightness(90%) contrast(85%);
+}
+
+.sidebar li:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.sidebar li .texto {
+  font-size: 14px;
+  color: #333;
+  white-space: nowrap;
+  margin-left: 10px;
+  opacity: 0;
+  transform: translateX(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.sidebar:hover li .texto {
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+body.modo-oscuro {
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+}
+
+body.modo-oscuro .sidebar {
+  background-color: #2b2b2b;
+}
+
+body.modo-oscuro .texto {
+  color: #fff;
+}
+
+.form-crear-cuenta {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+}
+
+.form-crear-cuenta label {
+  font-weight: bold;
+}
+
+.form-crear-cuenta input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-crear-cuenta button {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #2f3a3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-crear-cuenta button:hover {
+  background-color: #445;
+}
+
+.mensaje-muye {
+  background-color: #fef7f1;
+  border-left: 5px solid #ffa07a;
+  padding: 25px 30px;
+  border-radius: 18px;
+  margin: 40px auto;
+  max-width: 600px;
+  font-size: 15.5px;
+  font-style: italic;
+  color: #4b4442;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: #2f3a3c;
+  cursor: pointer;
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #2f3a3c;
+  /* color Muyè */
+  cursor: pointer;
+}
+
+.bandeja-container {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Fredoka', sans-serif;
+}
+
+.bandeja-container h2 {
+  text-align: center;
+  color: #2f3a3c;
+  margin-bottom: 30px;
+}
+
+.mensaje-card {
+  background: #fdf8f3;
+  border-left: 6px solid #ffb997;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.mensaje-card h4 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.mensaje-card p {
+  font-size: 15px;
+  margin: 0;
+  color: #444;
+}
+
+.mensaje-card button {
+  margin-top: 12px;
+  background-color: #2f3a3c;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.sin-mensajes {
+  text-align: center;
+  font-style: italic;
+  color: #999;
+}
+
+
+
+.info-usuario {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 16px;
+  margin-right: 25px;
+}
+
+.btn-cerrar-sesion {
+  background: #ffdadb;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  color: #b32d2d;
+  transition: background 0.2s;
+}
+
+.btn-cerrar-sesion:hover {
+  background: #ffb3b3;
+}
+
+.btn-iniciar-sesion,
+.btn-crear-cuenta {
+  background: #fff;
+  border: 1.5px solid #ddd;
+  color: #2f3a3c;
+  border-radius: 10px;
+  padding: 7px 18px;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: 600;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn-iniciar-sesion:hover,
+.btn-crear-cuenta:hover {
+  background: #eee;
+  color: #b32d2d;
+}
+
+.btn-tus-mascotas {
+  background: #e6faf3;
+  color: #13806c;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.18s, color 0.18s;
+  box-shadow: 0 2px 6px rgba(19, 128, 108, 0.07);
+  border: 1.5px solid #a4e3d5;
+  display: inline-block;
+}
+
+.btn-tus-mascotas:hover {
+  background: #c0e4d6;
+  color: #0b4d3c;
+}
+
+.contenedor-mascotas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.tarjeta-mascota {
+  width: 250px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  font-family: "Fredoka", sans-serif;
+}
+
+.tarjeta-mascota img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.tarjeta-mascota h3 {
+  margin: 10px 0 5px;
+}
+
+.tarjeta-mascota p {
+  margin: 5px 10px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* === MUYÈ — Botones minimalistas en header (override) === */
+:root {
+  /* usamos el verde del logo como base */
+  --muye-teal: #13806c;
+  /* texto/borde */
+  --muye-teal-hover: rgba(19, 128, 108, .08);
+  /* fondo hover */
+  --muye-ink: #2f3a3c;
+  /* gris del logo */
+}
+
+/* Links del header: Tus mascotas / Mis solicitudes / Solicitudes (dueño) */
+.btn-tus-mascotas {
+  background: transparent !important;
+  color: var(--muye-teal) !important;
+  border: 1.5px solid currentColor !important;
+  box-shadow: none !important;
+  padding: 8px 16px !important;
+  border-radius: 12px !important;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-tus-mascotas:hover {
+  background: var(--muye-teal-hover) !important;
+  color: var(--muye-teal) !important;
+}
+
+/* Cerrar sesión: neutro y minimal (sin rosa) */
+.btn-cerrar-sesion {
+  background: transparent !important;
+  color: var(--muye-ink) !important;
+  border: 1.5px solid currentColor !important;
+  box-shadow: none !important;
+  padding: 8px 16px !important;
+  border-radius: 12px !important;
+  font-weight: 600;
+}
+
+.btn-cerrar-sesion:hover {
+  background: rgba(47, 58, 60, .08) !important;
+  /* gris suave */
+}
+
+/* Botón "Publicar mascota" (quitar rosa y unificar con el logo) */
+.btn-publicar {
+  background: transparent !important;
+  color: var(--muye-teal) !important;
+  border: 1.5px solid var(--muye-teal) !important;
+  box-shadow: none !important;
+  padding: 10px 16px !important;
+  border-radius: 12px !important;
+  font-weight: 600;
+}
+
+.btn-publicar:hover {
+  background: var(--muye-teal-hover) !important;
+}
+
+/* Accesibilidad: foco visible y sobrio */
+.btn-tus-mascotas:focus,
+.btn-cerrar-sesion:focus,
+.btn-publicar:focus {
+  outline: 3px solid rgba(19, 128, 108, .25);
+  outline-offset: 2px;
+}
+
+/* === MUYÈ: barra de acciones arriba del filtro === */
+.toolbar-acciones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 8px auto 10px;
+}
+
+/* Paleta del logo */
+:root {
+  --muye-teal: #13806c;
+  --muye-teal-600: #0f6a5a;
+  --muye-teal-50: #e6f2ef;
+  --muye-ink: #2f3a3c;
+}
+
+/* Botones uniformes y relleno suave */
+.toolbar-acciones .btn-tus-mascotas,
+.toolbar-acciones .btn-mis-solicitudes,
+.toolbar-acciones .btn-solicitudes-duenio,
+.toolbar-acciones .btn-publicar {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+
+  font-size: 15px !important;
+  /* mis-mo tamaño */
+  line-height: 1 !important;
+  font-weight: 600;
+
+  min-height: 40px;
+  padding: 10px 16px !important;
+  border-radius: 12px !important;
+
+  background: var(--muye-teal-50) !important;
+  color: var(--muye-teal) !important;
+  border: 1.5px solid var(--muye-teal) !important;
+
+  box-shadow: none !important;
+  text-decoration: none !important;
+  margin: 0 !important;
+  /* anula márgenes heredados */
+}
+
+.toolbar-acciones .btn-tus-mascotas:hover,
+.toolbar-acciones .btn-mis-solicitudes:hover,
+.toolbar-acciones .btn-solicitudes-duenio:hover,
+.toolbar-acciones .btn-publicar:hover {
+  background: #d9ebe7 !important;
+  border-color: var(--muye-teal-600) !important;
+  color: var(--muye-teal-600) !important;
+}
+
+/* === MUYÈ: barra de acciones fija sobre el filtro (override final) === */
+.toolbar-acciones {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1100px;
+  margin: 8px auto 10px;
+}
+
+/* Colores del logo */
+:root {
+  --muye-teal: #13806c;
+  --muye-teal-600: #0f6a5a;
+  --muye-teal-50: #e6f2ef;
+  --muye-ink: #2f3a3c;
+}
+
+/* Botones uniformes y relleno suave (4 acciones) */
+.toolbar-acciones .btn-tus-mascotas,
+.toolbar-acciones .btn-mis-solicitudes,
+.toolbar-acciones .btn-solicitudes-duenio,
+.toolbar-acciones .btn-publicar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 600;
+  min-height: 40px;
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: var(--muye-teal-50);
+  color: var(--muye-teal);
+  border: 1.5px solid var(--muye-teal);
+  box-shadow: none;
+  text-decoration: none;
+  margin: 0;
+}
+
+.toolbar-acciones .btn-tus-mascotas:hover,
+.toolbar-acciones .btn-mis-solicitudes:hover,
+.toolbar-acciones .btn-solicitudes-duenio:hover,
+.toolbar-acciones .btn-publicar:hover {
+  background: #d9ebe7;
+  color: var(--muye-teal-600);
+  border-color: var(--muye-teal-600);
+}
+
+/* Filtro y grid ya están estilados desde tu <style> inline; no tocamos más */
+/* === MUYÈ modal editar === */
+:root{
+  --muye-teal:#13806c; --muye-teal-600:#0f6a5a; --muye-teal-50:#e6f2ef; --ink:#2f3a3c;
+}
+.muye-modal{position:fixed; inset:0; background:rgba(0,0,0,.45); display:grid; place-items:center; z-index:1000;}
+.muye-modal[hidden]{display:none;}
+.muye-dialog{position:relative; background:#fff; width:min(560px,92vw); border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.25);}
+.muye-dialog h3{margin:0 0 12px; color:#2f3a3c;}
+.muye-close{position:absolute; right:14px; top:10px; border:none; background:transparent; font-size:24px; line-height:1; cursor:pointer;}
+#form-editar label{display:block; font-weight:600; color:#2f3a3c; margin:10px 0 6px;}
+#form-editar input, #form-editar select, #form-editar textarea{
+  width:100%; border:1.5px solid #e0e4e6; border-radius:10px; padding:10px; font:inherit;
+}
+.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+.acciones{display:flex; gap:10px; justify-content:flex-end; margin-top:12px;}
+.btn-primario{background:var(--muye-teal); color:#fff; border:1px solid var(--muye-teal); border-radius:12px; padding:10px 14px; font-weight:700; cursor:pointer;}
+.btn-primario:hover{background:var(--muye-teal-600); border-color:var(--muye-teal-600);}
+.btn-secundario{background:#fff; color:var(--ink); border:1.5px solid #cfd6d8; border-radius:12px; padding:10px 14px; cursor:pointer;}
+.btn-secundario:hover{background:#f6f7f8;}
+@media (max-width:560px){ .grid-2{grid-template-columns:1fr;} }
+/* Ribbon “Adoptada” SOLO para el feed */
+.card{ position: relative; overflow: visible; }
+
+.muye-ribbon{
+  position:absolute;
+  top:12px;
+  right:-42px;         /* esquina derecha */
+  z-index:5;
+  width:180px;
+  padding:6px 0;
+  text-align:center;
+  font-weight:700;
+  font-size:14px;
+  color:#fff;
+  background:#2e7d32;
+  transform:rotate(45deg);
+  box-shadow:0 4px 10px rgba(0,0,0,.12);
+  pointer-events:none;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+.muye-ribbon::before,
+.muye-ribbon::after{
+  content:"";
+  position:absolute;
+  top:100%;
+  border-top:8px solid #215c25;
+  border-left:8px solid transparent;
+  border-right:8px solid transparent;
+}
+.muye-ribbon::before{ left:12px; }
+.muye-ribbon::after{  right:12px; }
+

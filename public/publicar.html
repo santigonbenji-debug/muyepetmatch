@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Publicar Mascota | Muyè PetMatch</title>
+    <link rel="icon" href="/loguito.png">
+    <meta name="description" content="Publicá tu mascota en adopción en minutos: foto, descripción y ubicación. Ayudemos juntos a encontrarle un hogar.">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @keyframes aparecer {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      #mensaje {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 16px;
+        color: #2f3a3c;
+        font-weight: 600;
+        animation: aparecer 0.5s ease-in;
+      }
+
+      :root {
+        --gris-logo: #2f3a3c;
+        --gris-suave: #3d4a4c;
+        --fondo-principal: #fdf8f3;
+        --fondo-card: #ffffff;
+        --rosa-suave: #f6e7eb;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Fredoka", sans-serif;
+        background-color: rgba(253, 248, 243, 0.92);
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        color: var(--gris-suave);
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/fondo.png"); /* o fondo.png */
+        background-size: 240px;
+        background-repeat: repeat;
+        background-position: center;
+        opacity: 0.12;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      .formulario-publicar {
+        background: #fff;
+        padding: 40px;
+        border-radius: 22px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+        width: 100%;
+        max-width: 500px;
+        font-family: "Fredoka", sans-serif;
+      }
+
+      .formulario-publicar h2 {
+        text-align: center;
+        color: #2f3a3c;
+        margin-bottom: 25px;
+      }
+
+      .formulario-publicar label {
+        font-weight: 600;
+        display: block;
+        margin-top: 18px;
+        margin-bottom: 6px;
+        color: #3d4a4c;
+      }
+
+      .formulario-publicar input,
+      .formulario-publicar textarea,
+      .formulario-publicar select {
+        width: 100%;
+        padding: 10px 14px;
+        border: 1.4px solid #ddd;
+        border-radius: 10px;
+        font-size: 15px;
+        font-family: inherit;
+        background: #fdfdfd;
+      }
+
+      .formulario-publicar textarea {
+        resize: vertical;
+      }
+
+      .formulario-publicar button {
+        margin-top: 25px;
+        width: 100%;
+        background-color: var(--rosa-suave);
+        color: #3d4a4c;
+        font-weight: bold;
+        border: none;
+        border-radius: 10px;
+        padding: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.25s;
+      }
+
+      .formulario-publicar button:hover {
+        background-color: #eed0d9;
+      }
+
+      #mensaje {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 15px;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/fondo.png");
+        background-size: 240px;
+        background-repeat: repeat;
+        background-position: center;
+        opacity: 0.12;
+        z-index: -1;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form
+      class="formulario-publicar"
+      id="formMascota"
+      enctype="multipart/form-data"
+    >
+      <h2>Publicar mascota</h2>
+
+      <label for="nombre">Nombre</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="edad">Edad</label>
+      <input type="number" id="edad" name="edad" required />
+
+      <label for="tipo">Tipo</label>
+      <input
+        type="text"
+        id="tipo"
+        name="tipo"
+        placeholder="Perro, gato, etc."
+        required
+      />
+
+      <label for="descripcion">Descripción</label>
+      <textarea
+        id="descripcion"
+        name="descripcion"
+        rows="4"
+        required
+      ></textarea>
+
+      <label for="ubicacion">Ubicación</label>
+      <input type="text" id="ubicacion" name="ubicacion" required />
+
+      <label for="foto">Imagen</label>
+      <input type="file" id="foto" name="foto" accept="image/*" required />
+
+      <button type="submit">Publicar mascota</button>
+    </form>
+
+    <div id="mensaje"></div>
+
+      
+    <script>window.REQUIERE_LOGIN = true;</script>
+    <script src="sesion.js" defer></script>
+    <script src="publicar.js" defer></script>
+    </body>
+    </html>
+
+

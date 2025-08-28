@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Perfil | Muyè PetMatch</title>
+    <link rel="icon" href="/loguito.png">
+    <meta name="description" content="Gestioná tus publicaciones: editar, eliminar o marcar como adoptada. Todo en un solo lugar.">
+
+    <link rel="stylesheet" href="inicio.css" />
+
+    <style>
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("/fondo.png");
+        background-size: 240px;
+        background-repeat: repeat;
+        background-position: center;
+        opacity: 0.12;
+        z-index: -1;
+        pointer-events: none;
+      }
+      body { background-color: #fdf8f3; font-family: "Fredoka","Poppins",sans-serif; margin: 0; }
+      .perfil-contenedor { display: flex; max-width: 1050px; margin: 60px auto 0; background:#fff; border-radius:28px; box-shadow:0 4px 24px rgba(0,0,0,.09); min-height:600px; overflow:hidden; }
+      .perfil-lateral { width:310px; min-width:310px; max-width:310px; background:#fcf3eb; padding:45px 30px 30px; display:flex; flex-direction:column; align-items:center; border-right:2px solid #ede0d1; }
+      .perfil-foto { width:110px; height:110px; border-radius:50%; object-fit:cover; border:3px solid #ffb997; margin-bottom:18px; background:#f6e6d5; }
+      .perfil-nombre { font-size:1.35em; font-weight:bold; margin-bottom:7px; color:#2f3a3c; text-align:center; }
+      .perfil-ubicacion,.perfil-email,.perfil-tel,.perfil-contacto { font-size:1em; margin:2px 0; color:#715d4f; text-align:center; word-break:break-word; }
+      .perfil-sobremi { font-size:.98em; margin:13px 0 12px; color:#777; text-align:center; font-style:italic; }
+      .btn-editar { background:#ffa07a; color:#fff; border:none; border-radius:10px; padding:9px 22px; font-size:1em; cursor:pointer; margin-top:16px; transition:background .2s; font-weight:600; box-shadow:0 2px 7px rgba(255,160,122,.13); }
+      .btn-editar:hover { background:#ff8950; }
+      .perfil-main { flex:1; padding:45px 40px 35px; display:flex; flex-direction:column; align-items:flex-start; min-width:320px; }
+      .perfil-main h2 { margin:0 0 28px; color:#2f3a3c; font-size:1.35em; font-weight:700; }
+      .cards-mascotas { display:flex; flex-wrap:wrap; gap:26px; width:100%; margin-top:6px; }
+      .card-mascota { background:#fef7f1; border-radius:15px; box-shadow:0 2px 9px rgba(47,58,60,.07); width:210px; padding:13px 15px 14px; display:flex; flex-direction:column; align-items:center; transition:box-shadow .19s, transform .19s; }
+      .card-mascota:hover { box-shadow:0 6px 18px rgba(255,160,122,.14); transform:translateY(-4px) scale(1.03); }
+      .card-mascota img { width:90%; height:110px; object-fit:cover; border-radius:10px; margin-bottom:9px; background:#ffe9db; }
+      .card-mascota h3 { margin:0 0 4px; font-size:1.09em; color:#d96a4d; font-weight:700; text-align:center; }
+      .card-mascota p { margin:2px 0 0; font-size:.96em; color:#715d4f; text-align:center; }
+
+      /* Modal base */
+      .muye-modal { position:fixed; inset:0; background:rgba(0,0,0,.45); display:grid; place-items:center; z-index:1000; }
+      .muye-modal[hidden]{ display:none; }
+      .muye-dialog { position:relative; background:#fff; width:min(560px,92vw); border-radius:16px; padding:20px; box-shadow:0 10px 30px rgba(0,0,0,.25); }
+      .muye-dialog h3 { margin:0 0 12px; color:#2f3a3c; }
+      .muye-close { position:absolute; right:14px; top:10px; border:none; background:transparent; font-size:24px; cursor:pointer; }
+      .muye-dialog label { display:block; font-weight:600; color:#2f3a3c; margin:10px 0 6px; }
+      .muye-dialog input,.muye-dialog select,.muye-dialog textarea { width:100%; border:1.5px solid #e0e4e6; border-radius:10px; padding:10px; font:inherit; }
+      .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+      .acciones { display:flex; gap:10px; justify-content:flex-end; margin-top:12px; }
+      .btn-primario { background:#13806c; color:#fff; border:1px solid #13806c; border-radius:12px; padding:10px 14px; font-weight:700; cursor:pointer; }
+      .btn-primario:hover{ background:#0f6a5a; border-color:#0f6a5a; }
+      .btn-secundario{ background:#fff; color:#2f3a3c; border:1.5px solid #cfd6d8; border-radius:12px; padding:10px 14px; cursor:pointer; }
+      .btn-secundario:hover{ background:#f6f7f8; }
+      @media (max-width: 560px) { .grid-2{ grid-template-columns:1fr; } }
+      
+    </style>
+    
+  </head>
+
+  <body>
+    <div class="perfil-contenedor">
+      <!-- Lateral -->
+      <div class="perfil-lateral">
+        <img src="perfil-default.png" class="perfil-foto" alt="Tu foto de perfil" id="avatarMain" />
+        <div class="perfil-nombre" id="perfilNombre">Nombre Apellido</div>
+        <div class="perfil-ubicacion" id="perfilUbicacion">Ubicación</div>
+        <div class="perfil-email" id="perfilEmail">usuario@email.com</div>
+        <div class="perfil-tel" id="perfilTelefono">Tel: —</div>
+        <div class="perfil-contacto" id="perfilContacto">@alias</div>
+        <div class="perfil-sobremi" id="perfilSobreMi">¡Amante de los animales! 🐶🐱</div>
+        <button class="btn-editar" id="btnEditarPerfil" type="button">Editar perfil</button>
+      </div>
+
+      <!-- Main -->
+      <div class="perfil-main">
+        <h2>MIS MASCOTAS</h2>
+        <div class="cards-mascotas" id="cardsMascotas"></div>
+      </div>
+    </div>
+
+    <!-- Modal editar PERFIL -->
+    <div id="modal-editar-perfil" class="muye-modal" hidden>
+      <div class="muye-dialog" role="dialog" aria-modal="true" aria-labelledby="perfilTitle">
+        <button type="button" class="muye-close" id="cerrarModalPerfil" aria-label="Cerrar">×</button>
+        <h3 id="perfilTitle">Editar perfil</h3>
+
+        <form id="formPerfil">
+          <label>Nombre <input type="text" id="inputNombre" maxlength="60" required /></label>
+
+          <div class="grid-2">
+            <label>Ubicación <input type="text" id="inputUbicacion" maxlength="60" /></label>
+            <label>Email <input type="email" id="inputEmail" required /></label>
+          </div>
+
+          <div class="grid-2">
+            <label>Teléfono <input type="text" id="inputTelefono" maxlength="30" /></label>
+            <label>WhatsApp <input type="text" id="inputWhatsapp" maxlength="30" /></label>
+          </div>
+
+          <label>Alias <input type="text" id="inputAlias" maxlength="40" /></label>
+
+          <label>Sobre mí <textarea id="inputSobreMi" rows="3" maxlength="240"></textarea></label>
+
+          <label>Foto de perfil</label>
+          <input type="file" id="fotoPerfilFile" accept="image/*" />
+          <img id="avatarPreview" alt="Preview" style="width:120px;height:120px;border-radius:50%;object-fit:cover;margin-top:8px;">
+
+          <div class="acciones">
+            <button type="submit" class="btn-primario">Guardar cambios</button>
+            <button type="button" id="cancelarEditarPerfil" class="btn-secundario">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Modal editar MASCOTA (sin cambios) -->
+    <div id="modal-editar" class="muye-modal" hidden>
+      <div class="muye-dialog" role="dialog" aria-modal="true" aria-labelledby="editTitle">
+        <button type="button" class="muye-close" id="cerrarModalEditar" aria-label="Cerrar">×</button>
+        <h3 id="editTitle">Editar mascota</h3>
+        <form id="form-editar">
+          <input type="hidden" id="editId">
+          <label>Nombre <input type="text" id="editNombre" maxlength="40" required></label>
+          <div class="grid-2">
+            <label>Edad <input type="number" id="editEdad" min="0" max="40" required></label>
+            <label>Tipo
+              <select id="editTipo" required>
+                <option value="Perro">Perro</option>
+                <option value="Gato">Gato</option>
+                <option value="Otro">Otro</option>
+              </select>
+            </label>
+          </div>
+          <label>Ubicación <input type="text" id="editUbicacion" maxlength="60"></label>
+          <label>Descripción <textarea id="editDescripcion" rows="3" maxlength="240"></textarea></label>
+          <div class="acciones">
+            <button type="submit" class="btn-primario">Guardar cambios</button>
+            <button type="button" id="cancelarEditar" class="btn-secundario">Cancelar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>window.REQUIERE_LOGIN = true;</script>
+
+    <script src="sesion.js"></script>
+    <script> window.muSession?.requireAuth("/mis-mascotas.html"); </script>
+    <script src="mis-mascotas.js" defer></script>
+  </body>
+</html>
+

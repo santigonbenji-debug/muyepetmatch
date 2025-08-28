@@ -1,1 +1,63 @@
-[]
+[
+  {
+    "nombre": "Santiago Creador",
+    "email": "santisbg9@gmail.com",
+    "password": "$2b$10$o7XPWnj5Zk0Fz65x887guef5Dy.aClK28WlbJ6uUvr6.HsiPe//GW",
+    "ubicacion": "Villa Mercedes, San Luis",
+    "telefono": "2657-392998",
+    "alias": "santi.skerri",
+    "sobremi": "Soy el creador de este sitio web, espero lo disfruten, fue en honor a mi perrita Lupe que fallecio hace poco </3",
+    "foto": "",
+    "whatsapp": "2657-392998",
+    "fotoPerfil": "/fotos/perfiles/1756229774358-ChatGPT_Image_26_jul_2025__15_52_41.png"
+  },
+  {
+    "nombre": "Ale Altamiranda ",
+    "email": "ale.altamiranda00@gmail.com",
+    "password": "$2b$10$PK1Rkus.GxVf3RFaW7iYKOntA6uxrdX88uKAZVyo/D43sS9bVyYO6",
+    "ubicacion": "",
+    "telefono": "2657589154",
+    "whatsapp": "",
+    "alias": "",
+    "sobremi": ""
+  },
+  {
+    "id": 1756232249322,
+    "nombre": "Santiago Gonzalez",
+    "email": "santisbg@outlook.es",
+    "password": "cazeria11",
+    "ubicacion": "Mendoza",
+    "telefono": "2657889900",
+    "whatsapp": "2657889900",
+    "alias": "Creator",
+    "sobremi": "El mejor cuidador",
+    "fotoPerfil": "",
+    "creadoEn": "2025-08-26T18:17:29.322Z"
+  },
+  {
+    "id": 1756235831410,
+    "nombre": "Carlos andres",
+    "email": "carlitos@gmail.com",
+    "password": "$2b$10$yHvSkndMmWZylj2ADycFBux4U9vo.svZQ9j/G4YwwdUXM6P9vEAI.",
+    "ubicacion": "Formosa",
+    "telefono": "22222",
+    "whatsapp": "22222",
+    "alias": "carlitos",
+    "sobremi": "carlos elvio",
+    "fotoPerfil": "",
+    "creadoEn": "2025-08-26T19:17:11.410Z"
+  },
+  {
+    "id": 1756312121207,
+    "nombre": "Pepecumbialiga",
+    "email": "alejandro-altamiranda_osmar@hotmail.com",
+    "password": "$2b$10$aSwx.PpvoeY5gc8UIbaDNe2wcHuIHygCw6Y3BbmlLTcb/XIllYjCy",
+    "ubicacion": "Villa Mercedes",
+    "telefono": "",
+    "whatsapp": "2657589154",
+    "alias": "PepecumbialigaCai2015",
+    "sobremi": "Venga de Bolivia",
+    "fotoPerfil": "",
+    "creadoEn": "2025-08-27T16:28:41.207Z"
+  }
+]

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Crear cuenta · Muyè PetMatch</title>
+  <link rel="icon" href="/loguito.png">
+  <meta name="description" content="Creá tu cuenta en Muyè PetMatch y empezá a publicar o adoptar mascotas de forma simple y segura.">
+
+  <style>
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("/fondo.png");
+      background-size: 240px;
+      background-repeat: repeat;
+      background-position: center;
+      opacity: 0.12;
+      z-index: -1;
+      pointer-events: none;
+    }
+    :root{
+      --bg:#fdf8f3; --card:#fff; --text:#2f3a3c; --muted:#7c8b8e;
+      --primary:#2f3a3c; --radius:16px; --b:#e9e6e6;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);font-family:Poppins, system-ui, -apple-system, Arial, sans-serif;color:var(--text)}
+    .wrap{
+      max-width: 420px; margin:64px auto; background:var(--card);
+      border-radius:var(--radius); box-shadow:0 10px 30px rgba(0,0,0,.07);
+      padding:28px 26px 26px;
+    }
+    h1{margin:0 0 18px;font-size:32px; text-align:center}
+    form{display:grid; gap:12px}
+    label{font-size:14px; color:var(--muted); display:block; margin-bottom:6px}
+    input, textarea{
+      width:100%; padding:12px 14px; border:1px solid var(--b); border-radius:12px;
+      background:#fafafa; font-size:15px; outline:none;
+    }
+    textarea{resize:vertical; min-height:84px}
+    .row{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    @media (max-width:600px){ .row{grid-template-columns:1fr} }
+    button[type="submit"]{
+      margin-top:6px; width:100%; padding:12px 14px; border:0; border-radius:12px;
+      background:var(--primary); color:#fff; font-weight:700; font-size:16px; cursor:pointer;
+    }
+    button[disabled]{opacity:.6; cursor:not-allowed}
+    .msg{min-height:22px; font-size:14px; color:#b32d2d; margin-top:2px; text-align:center}
+    .hint{font-size:12px; color:var(--muted); margin-top:-6px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Crear cuenta</h1>
+
+    <form id="registroForm" novalidate>
+      <div>
+        <label for="regNombre">Nombre</label>
+        <input id="regNombre" type="text" autocomplete="name" placeholder="Tu nombre y apellido" required>
+      </div>
+
+      <div>
+        <label for="regEmail">Email</label>
+        <input id="regEmail" type="email" autocomplete="email" placeholder="tucorreo@ejemplo.com" required>
+      </div>
+
+      <div>
+        <label for="regPassword">Contraseña</label>
+        <input id="regPassword" type="password" autocomplete="new-password" placeholder="Mínimo 6 caracteres" minlength="6" required>
+      </div>
+
+      <div>
+        <label for="regUbicacion">Ubicación</label>
+        <input id="regUbicacion" type="text" placeholder="Ciudad, provincia">
+      </div>
+
+      <div class="row">
+        <div>
+          <label for="regTelefono">Teléfono</label>
+          <input id="regTelefono" type="tel" inputmode="tel" placeholder="Ej: 11 5555 5555">
+        </div>
+        <div>
+          <label for="regWhatsapp">WhatsApp</label>
+          <input id="regWhatsapp" type="tel" inputmode="tel" placeholder="Ej: 11 5555 5555">
+        </div>
+      </div>
+
+      <div>
+        <label for="regAlias">Alias</label>
+        <input id="regAlias" type="text" placeholder="@tuusuario" maxlength="30">
+        <div class="hint">Podés dejarlo vacío. Si ponés @ al principio, lo limpiamos nosotros 😉</div>
+      </div>
+
+      <div>
+        <label for="regSobreMi">Sobre mí</label>
+        <textarea id="regSobreMi" maxlength="500" placeholder="Contá brevemente sobre vos y por qué amás a los animales"></textarea>
+      </div>
+      <div class="grupo" style="display:flex;gap:8px;align-items:flex-start">
+        <input id="regAcepto" type="checkbox" required style="margin-top:4px">
+        <label for="regAcepto">
+          Acepto los
+          <a href="index.html#terminos" target="_blank" rel="noopener">Términos y Condiciones</a> y la
+          <a href="index.html#privacidad" target="_blank" rel="noopener">Política de Privacidad</a>.
+        </label>
+      </div>
+
+
+      <button type="submit" id="btnRegistrar">Registrar</button>
+      <div class="msg" id="mensaje" aria-live="polite"></div>
+    </form>
+  </div>
+
+  <script src="sesion.js" defer></script>
+  <script src="registro.js" defer></script>
+</body>
+</html>
+

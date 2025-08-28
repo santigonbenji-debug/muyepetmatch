@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api/
+Allow: /
+
+Sitemap: https://1ad8dc2f-59a8-4450-9313-6fde6981bcb3-00-3q7g2mlzk8gvy.picard.replit.dev:3000/sitemap.xml
+

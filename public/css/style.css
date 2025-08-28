@@ -24,7 +24,8 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('fondo.png'); /* Asegurate que se llama así */
+  background-image: url('/fondo.png');
+  /* Asegurate que se llama así */
   background-size: 300px;
   background-repeat: repeat;
   background-position: center;
@@ -86,7 +87,7 @@ nav {
   justify-content: center;
   background-color: #e6e6e6;
   padding: 15px 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
   margin-bottom: 20px;
 }
 
@@ -181,7 +182,7 @@ main li {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   display: none;
   justify-content: center;
   align-items: center;
@@ -231,6 +232,7 @@ main li {
   cursor: pointer;
   font-size: 16px;
 }
+
 .footer {
   text-align: center;
   padding: 30px 10px;
@@ -254,6 +256,7 @@ main li {
 .footer-links a:hover {
   color: #222;
 }
+
 /* Nueva pantalla principal */
 #pantalla-principal {
   display: flex;
@@ -315,4 +318,23 @@ main li {
 .boton-central:hover {
   background-color: #5e5e5e;
 }
-
+.info-banner{
+  margin:12px 0 8px; padding:10px 12px; border-radius:10px;
+  background:#fff6e9; border:1px solid #ffe2b8; color:#5d4200; font-size:14px;
+}
+.info-banner a{ color:inherit; text-decoration:underline; }
+.muted{ color:#686868; font-size:14px; }
+#adoptar ol, #quienes ul, #info ul{ line-height:1.65; margin-left:18px; }
+#info h3{ margin:14px 0 6px; font-size:18px; }
+/* === Legales (Términos / Privacidad) === */
+.legal-card{
+  background:#fff;
+  border:1px solid #e9e6e6;
+  border-radius:14px;
+  padding:14px 16px;
+  margin:12px 0;
+  box-shadow:0 6px 18px rgba(0,0,0,.05);
+}
+.legal-card h3{ margin:4px 0 6px; font-size:18px; }
+#terminos .muted, #privacidad .muted{ color:#686868; font-size:14px; }
+#terminos ul, #privacidad ul{ margin-left:18px; line-height:1.6; }
