@@ -520,3 +520,77 @@ body.modo-oscuro .texto {
 .muye-ribbon::before{ left:12px; }
 .muye-ribbon::after{  right:12px; }
 
+/* Contenedor principal debajo del header fijo */
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px;
+}
+@media (max-width: 640px) {
+  main { padding: 12px; }
+}
+
+/* Grupo de botones grandes del inicio */
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+  justify-items: center;
+  margin: 16px 0 8px;
+}
+.action-buttons .btn {
+  width: 100%;
+  max-width: 260px;
+  border-radius: 16px;
+  padding: 12px 16px;
+  font-weight: 700;
+  font-size: 16px;
+}
+@media (max-width: 640px) {
+  .action-buttons {
+    grid-template-columns: 1fr; /* apila en columna en celulares */
+    gap: 10px;
+  }
+  .action-buttons .btn {
+    max-width: 100%;
+    font-size: 15px;
+    padding: 12px 14px;
+  }
+}
+
+/* Filtro de ubicaciones */
+.filter-row,
+.filter-row select {
+  width: 100%;
+}
+.filter-row select {
+  height: 40px;
+  border-radius: 12px;
+}
+
+/* Paginación centrada y compacta en móvil */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 10px 0 18px;
+}
+.pagination .page-btn {
+  min-width: 90px;
+  height: 36px;
+  border-radius: 10px;
+}
+
+/* Card del feed: que no desborde en móvil */
+.pet-card {
+  border-radius: 18px;
+  overflow: hidden;
+}
+.pet-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
