@@ -1,34 +1,35 @@
+/* ===== Header MUYÈ - Consolidado y responsivo ===== */
+
 .encabezado-horizontal {
-  z-index: 10;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  /* logo a la izquierda */
-  position: relative;
-  background: #fdf8f3;
-  height: 80px;
-  padding: 0 40px;
-}
+  justify-content: space-between;
+  flex-wrap: wrap;            /* 👉 permite 2 líneas si no entra */
 
+  background: #fdf8f3;        /* tu color */
+  box-sizing: border-box;
+  padding: 10px 16px;
+  gap: 12px;
+  border-bottom: 1px solid #eee;
+  height: auto;               /* ❗ quita el alto fijo que cortaba */
+}
 
 .contenedor-logo {
   display: flex;
   align-items: center;
-  gap: 15px;
-  position: static;
-  /* estaba absolute */
-  transform: none;
-  /* quitamos el centrado forzado */
-  margin-right: auto;
-  /* empuja los botones a la derecha */
+  gap: 10px;
+  min-width: 0;
+  margin-right: auto;         /* empuja acciones a la derecha */
 }
 
-.logo-muye {
-  height: 48px;
-}
+.logo-muye { width: 40px; height: 40px; }  /* más compacto en móvil */
 
 .titulo-header {
-  font-size: 26px;
+  font-size: 20px;
   font-weight: 600;
   margin-left: 7px;
   color: #2f3a3c;
@@ -36,100 +37,27 @@
 }
 
 .subtitulo-header {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
   color: #7d878a;
   margin-left: 6px;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.2px;
   position: relative;
-  top: 2px;
+  top: 1px;
 }
 
+/* Botonera / info usuario (login / crear cuenta / cerrar sesión) */
 .info-usuario {
-  position: absolute;
-  right: 40px;
+  /* ❗ volver al flujo normal (ya no absolute) */
+  position: static;
+  right: auto;
+
   display: flex;
   align-items: center;
-  gap: 15px;
-  font-size: 16px;
-}
-
-.btn-cerrar-sesion {
-  background: #ffdadb;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  color: #b32d2d;
-  transition: background 0.2s;
-  font-weight: bold;
-}
-
-.btn-cerrar-sesion:hover {
-  background: #ffb3b3;
-}
-
-
-.main-content {
-  margin-left: 80px;
-  margin-top: 80px;
-  /* ✅ AGREGÁ ESTA LÍNEA */
-  padding: 0 40px 40px;
-  flex: 1;
-  }
-/* ======= ADAPTADOR PARA EL HEADER EXISTENTE EN inicio.html ======= */
-/* (no cambia tu estructura; solo lo hace responsive) */
-
-.encabezado-horizontal {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background: #fff;
-  border-bottom: 1px solid #eee;
-}
-
-.encabezado-horizontal,
-.encabezado-horizontal .contenedor-logo {
-  display: flex;
-  align-items: center;
-}
-
-.encabezado-horizontal {
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 16px;
-  flex-wrap: wrap;       /* 👈 permite bajar a 2 líneas en móvil */
-}
-
-.contenedor-logo {
   gap: 10px;
-  min-width: 0;
-}
-
-.logo-muye {
-  width: 42px;
-  height: 42px;
-}
-
-.titulo-header {
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: .3px;
-  color: #2f3a3c;
-}
-.subtitulo-header {
-  font-size: 14px;
-  color: #6b7280;
-  margin-left: 6px;
-}
-
-.info-usuario {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   margin-left: auto;
-  flex-wrap: wrap;
+  flex-wrap: wrap;            /* si no entra, baja a 2da línea */
+  font-size: 14px;
 }
 
 .info-usuario a,
@@ -137,20 +65,41 @@
   border: 1px solid #d1d5db;
   background: #fff;
   border-radius: 999px;
-  padding: 8px 14px;
+  padding: 7px 12px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
   text-decoration: none;
   color: #2f3a3c;
 }
 
-/* ===== MOBILE ===== */
+/* Botón “Cerrar sesión” con tus colores */
+.btn-cerrar-sesion {
+  background: #ffdadb;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #b32d2d;
+  transition: background 0.2s;
+  font-weight: bold;
+}
+.btn-cerrar-sesion:hover { background: #ffb3b3; }
+
+/* Espaciado del contenido principal bajo header pegajoso */
+.main-content {
+  padding: 20px 16px 40px;   /* respiración lateral y abajo */
+  flex: 1;
+}
+
+/* ===== Mobile ===== */
 @media (max-width: 640px) {
   .encabezado-horizontal { padding: 8px 12px; gap: 8px 10px; }
   .logo-muye { width: 34px; height: 34px; }
   .titulo-header { font-size: 18px; }
-  .subtitulo-header { font-size: 13px; }
+  .subtitulo-header { font-size: 13px; letter-spacing: 1px; }
   .info-usuario { width: 100%; justify-content: flex-start; }
-  .info-usuario a, .info-usuario button { font-size: 13px; padding: 7px 12px; }
+  .info-usuario a,
+  .info-usuario button { font-size: 13px; padding: 7px 12px; }
 }
