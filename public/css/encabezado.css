@@ -35,7 +35,7 @@
   margin-right: auto;         /* empuja acciones a la derecha */
 }
 
-.logo-muye{
+sslogo-muye{
   width: clamp(34px, 3.5vw, 52px);
   height: clamp(34px, 3.5vw, 52px);
 }
