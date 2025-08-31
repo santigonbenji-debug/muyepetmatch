@@ -1,79 +1,87 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Iniciar sesión - Muyè PetMatch</title>
-  <link rel="icon" href="/loguito.png">
-  <meta name="description" content="Iniciá sesión en Muyè PetMatch para publicar, gestionar y adoptar mascotas con confianza y transparencia.">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Iniciar sesión - Muyè PetMatch</title>
+    <link rel="icon" href="/loguito.png" />
+    <meta
+      name="description"
+      content="Iniciá sesión en Muyè PetMatch para publicar, gestionar y adoptar mascotas con confianza y transparencia."
+    />
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/encabezado.css">
-  <link rel="stylesheet" href="css/inicio.css">
-  <style>
-    .login-container {
-      max-width: 350px;
-      margin: 60px auto;
-      background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-      padding: 30px 40px;
-      text-align: center;
-    }
-    .login-container input {
-      width: 100%;
-      padding: 9px 12px;
-      margin-bottom: 18px;
-      border: 1px solid #ccc;
-      border-radius: 9px;
-      font-size: 15px;
-      background: #f9f7f7;
-    }
-    .login-container button {
-      width: 100%;
-      padding: 10px 0;
-      background: #2f3a3c;
-      color: #fff;
-      border: none;
-      border-radius: 9px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      margin-top: 10px;
-      transition: background 0.2s;
-    }
-    .login-container button:hover {
-      background: #3d4a4c;
-    }
-    .login-container .error-msg {
-      color: #b32d2d;
-      margin-bottom: 12px;
-      font-size: 15px;
-    }
-  </style>
-</head>
-<body>
-  <header class="encabezado-horizontal">
-    <div class="contenedor-logo">
-      <img src="loguito.png" alt="Logo Muyè PetMatch" class="logo-muye">
-      <span class="titulo-header"><b>Muye</b></span>
-      <span class="subtitulo-header">PETMATCH</span>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/encabezado.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
+    <style>
+      .login-container {
+        max-width: 350px;
+        margin: 60px auto;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+        padding: 30px 40px;
+        text-align: center;
+      }
+      .login-container input {
+        width: 100%;
+        padding: 9px 12px;
+        margin-bottom: 18px;
+        border: 1px solid #ccc;
+        border-radius: 9px;
+        font-size: 15px;
+        background: #f9f7f7;
+      }
+      .login-container button {
+        width: 100%;
+        padding: 10px 0;
+        background: #2f3a3c;
+        color: #fff;
+        border: none;
+        border-radius: 9px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background 0.2s;
+      }
+      .login-container button:hover {
+        background: #3d4a4c;
+      }
+      .login-container .error-msg {
+        color: #b32d2d;
+        margin-bottom: 12px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="encabezado-horizontal">
+      <div class="contenedor-logo">
+        <span class="titulo-header"><b>Muye</b></span>
+        <span class="subtitulo-header">PETMATCH</span>
+      </div>
+      <div id="info-usuario" class="info-usuario"></div>
+    </header>
+
+    <div class="login-container">
+      <h2>Iniciar sesión</h2>
+      <form id="formLogin">
+        <input type="email" id="loginEmail" placeholder="Email" required />
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="Contraseña"
+          required
+        />
+        <div class="error-msg" id="loginError"></div>
+        <button type="submit">Ingresar</button>
+      </form>
+      <p style="margin-top: 10px">
+        ¿No tenés cuenta? <a href="registro.html">Registrate</a>
+      </p>
     </div>
-    <div id="info-usuario" class="info-usuario"></div>
-  </header>
-
-  <div class="login-container">
-    <h2>Iniciar sesión</h2>
-    <form id="formLogin">
-      <input type="email" id="loginEmail" placeholder="Email" required>
-      <input type="password" id="loginPassword" placeholder="Contraseña" required>
-      <div class="error-msg" id="loginError"></div>
-      <button type="submit">Ingresar</button>
-    </form>
-    <p style="margin-top: 10px;">¿No tenés cuenta? <a href="registro.html">Registrate</a></p>
-  </div>
-  <script src="sesion.js" defer></script>
-  <script src="inicio.js" defer></script>
-  <script src="login.js" defer></script>
+    <script src="sesion.js" defer></script>
+    <script src="inicio.js" defer></script>
+    <script src="login.js" defer></script>
   </body>
-  </html>
-
+</html>
