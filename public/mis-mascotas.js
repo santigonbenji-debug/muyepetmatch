@@ -48,6 +48,8 @@
     `;
   }
 
+
+  
   function renderCards() {
     const wrap = $("#cardsMascotas");
     if (!wrap) return;
@@ -149,7 +151,9 @@
       $("#perfilContacto")   && ($("#perfilContacto").textContent   = u.alias ? `@${u.alias}` : "");
       $("#perfilSobreMi")    && ($("#perfilSobreMi").textContent    = u.sobreMi || u.sobremi || "¡Amante de los animales! 🐶🐱");
 
+
       const avatar = $("#avatarMain");
+
       if (avatar) {
         avatar.src = u.fotoPerfil || fallback;
         avatar.onerror = function(){ this.onerror=null; this.src=fallback; };
@@ -169,7 +173,7 @@
       .then(({ok, usuario:u})=>{
         if(!ok) return;
         $("#inputNombre").value    = u.nombre    || "";
-        "#inputUbicacion" in window && ($("#inputUbicacion").value = u.ubicacion || "");
+        $("#inputUbicacion").value = u.ubicacion || "";
         $("#inputEmail").value     = u.email     || usuarioEmail;
         $("#inputTelefono").value  = u.telefono  || "";
         $("#inputWhatsapp").value  = u.whatsapp  || "";
@@ -247,3 +251,4 @@
   /* ---------- init ---------- */
   document.addEventListener("DOMContentLoaded", cargar);
 })();
+
