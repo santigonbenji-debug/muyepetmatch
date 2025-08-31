@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "id": 1756660519466,
+    "nombre": "Muye PetMatch",
+    "email": "santisbg9@gmail.com",
+    "password": "$2b$10$e4d876vMr3/tVKZI0spnyOZpDFB/69t944EjTu3.axVl1B6Kuvetm",
+    "ubicacion": "Villa Mercedes, SL",
+    "telefono": "2657392998",
+    "whatsapp": "2657392998",
+    "alias": "Muye",
+    "sobremi": "Encontra tu compañero en simples pasos",
+    "fotoPerfil": "",
+    "creadoEn": "2025-08-31T17:15:19.466Z"
+  },
+  {
+    "id": 1756660931892,
+    "nombre": "Santiago Gonzalez",
+    "email": "muyepetmatch@gmail.com",
+    "password": "$2b$10$qyCYk5H671omkxAA9ab3z.K9rXxXIboX2tnwoW7Dn3.DtqI.0gpX.",
+    "ubicacion": "Villa Mercedes, SL",
+    "telefono": "2657392998",
+    "whatsapp": "2657392998",
+    "alias": "muyepetmatch",
+    "sobremi": "Por y para ustedes",
+    "fotoPerfil": "",
+    "creadoEn": "2025-08-31T17:22:11.892Z"
+  }
+]
