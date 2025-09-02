@@ -257,6 +257,18 @@ function armarHeader() {
     `;
   }
 }
+// --- Escucha global para actualizar el saludo cuando cambie el nombre ---
+document.addEventListener("muye:nombre-cambiado", (e) => {
+  const nuevoNombre = (e.detail && e.detail.nombre) || "";
+  if (nuevoNombre) {
+    localStorage.setItem("usuarioNombre", nuevoNombre);
+  }
+  // Si existe armarHeader, re-renderiza el saludo
+  if (typeof armarHeader === "function") {
+    armarHeader();
+  }
+});
+
 
 // Eventos y arranque
 function wireEventos() {

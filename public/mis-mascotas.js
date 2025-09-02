@@ -234,6 +234,22 @@
         });
         const j2 = await r2.json().catch(()=>({}));
         if (!r2.ok || !j2.ok) throw new Error(j2.error || "No se pudo guardar");
+        // === Actualizar saludo y sesión local ===
+        const nuevoNombre = (document.querySelector("#inputNombre")?.value || "").trim();
+        if (nuevoNombre) {
+          localStorage.setItem("usuarioNombre", nuevoNombre);
+        }
+
+        const nuevoEmail = (document.querySelector("#inputEmail")?.value || "").trim();
+        if (nuevoEmail) {
+          localStorage.setItem("usuarioEmail", nuevoEmail);
+        }
+
+        // Avisar globalmente que cambió el nombre (para que otras páginas refresquen el header)
+        document.dispatchEvent(new CustomEvent("muye:nombre-cambiado", {
+          detail: { nombre: nuevoNombre }
+        }));
+
 
         cerrarModalPerfil();
         if (ruta) { const main = $("#avatarMain"); if (main) main.src = ruta; }
