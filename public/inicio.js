@@ -173,8 +173,11 @@ function irNext() { if (PAGINA < totalPaginas()) { PAGINA++; renderLista(); rend
 
 // Cargar datos
 function cargarMascotas() {
-  fetch("/api/mascotas")
-    .then((r) => r.json())
+  fetch("/api/mascotas", { cache: "no-store" })
+    .then((r) => {
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.json();
+    })
     .then((mascotas) => {
       TODAS = Array.isArray(mascotas) ? mascotas.slice() : [];
       poblarUbicaciones(TODAS);
@@ -182,8 +185,12 @@ function cargarMascotas() {
       PAGINA = 1;
       renderLista(); renderPaginacion();
     })
-    .catch(() => { $("#contenedor-mascotas").innerHTML = "<p>Error cargando el feed.</p>"; });
+    .catch((e) => {
+      console.error("Error cargando mascotas:", e);
+      $("#contenedor-mascotas").innerHTML = "<p>Error cargando el feed.</p>";
+    });
 }
+
 
 // Modal “Solicitud de adopción” (con textarea)
 let MASCOTA_SELECCIONADA = null;

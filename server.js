@@ -363,11 +363,14 @@ app.post("/api/publicar", uploadMascota.single("foto"), (req, res) => {
 app.get("/api/mascotas", (_req, res) => {
   const archivo = path.join(__dirname, "mascotas.json");
   try {
-    res.json(JSON.parse(fssync.readFileSync(archivo, "utf8") || "[]"));
+    const data = JSON.parse(fssync.readFileSync(archivo, "utf8") || "[]");
+    res.setHeader("Cache-Control", "no-store, max-age=0");
+    res.json(data);
   } catch {
     res.json([]);
   }
 });
+
 
 app.post("/api/mascotas/:id/estado", (req, res) => {
   const { id } = req.params;
